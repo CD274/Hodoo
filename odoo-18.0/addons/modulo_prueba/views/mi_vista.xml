@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="mi_modelo_tree_view">
+            <field name="name">Lista de Mi Modelo</field>
+            <field name="model">mi.modelo</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="name"/>
+                    <field name="descripcion"/>
+                    <field name="fecha"/>
+                </list>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="mi_modelo_action">
+            <field name="name">Mi Modelo</field>
+            <field name="res_model">mi.modelo</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Mi Menú" id="mi_menu_principal" web_icon="mi_modulo,static/description/icon.png"/>
+        <menuitem name="Mi Modelo" id="mi_modelo_menu" parent="mi_menu_principal" action="mi_modelo_action"/>
+    </data>
+</odoo>
